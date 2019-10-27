@@ -24,8 +24,25 @@
       <file leaf-file-name="appContext.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/appContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="80" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
+            <state relative-caret-position="480">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#986#1007#0" expanded="true" />
+                <element signature="e#1048#1071#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountryMusic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CountryMusic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+              <folding>
+                <element signature="e#87#88#0" expanded="true" />
+                <element signature="e#114#115#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/musicPlayer.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="20">
-              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+              <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -86,15 +103,16 @@
       <file leaf-file-name="MusicPlayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MusicPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+            <state relative-caret-position="320">
+              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
               <folding>
-                <element signature="e#89#90#0" expanded="true" />
-                <element signature="e#123#124#0" expanded="true" />
-                <element signature="e#154#155#0" expanded="true" />
-                <element signature="e#182#183#0" expanded="true" />
-                <element signature="e#223#224#0" expanded="true" />
-                <element signature="e#257#258#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#265#266#0" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#435#436#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
                 <element signature="e#403#404#0" expanded="true" />
                 <element signature="e#443#444#0" expanded="true" />
                 <element signature="e#475#476#0" expanded="true" />
@@ -102,8 +120,6 @@
                 <element signature="e#534#535#0" expanded="true" />
                 <element signature="e#575#576#0" expanded="true" />
                 <element signature="e#611#612#0" expanded="true" />
-                <element signature="e#154#155#0" expanded="true" />
-                <element signature="e#219#220#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,9 +146,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Music.java" />
         <option value="$PROJECT_DIR$/src/main/java/ClassicMusic.java" />
         <option value="$PROJECT_DIR$/src/main/java/RockMusic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/MusicPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/TestSpring.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mysicPlayer.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/MusicPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CountryMusic.java" />
         <option value="$PROJECT_DIR$/src/main/resources/appContext.xml" />
       </list>
     </option>
@@ -307,12 +324,12 @@
       <workItem from="1572084169016" duration="27000" />
       <workItem from="1572084208592" duration="31000" />
       <workItem from="1572084340323" duration="4992000" />
-      <workItem from="1572168069661" duration="2801000" />
+      <workItem from="1572168069661" duration="4818000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15724000" />
+    <option name="totallyTimeSpent" value="17741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1143" height="1201" extended-state="0" />
@@ -335,10 +352,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3314554" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3314554" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22580644" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22580644" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -405,12 +422,13 @@
         <state relative-caret-position="140">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#89#90#0" expanded="true" />
-            <element signature="e#123#124#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
             <element signature="e#403#404#0" expanded="true" />
             <element signature="e#443#444#0" expanded="true" />
             <element signature="e#475#476#0" expanded="true" />
@@ -418,8 +436,6 @@
             <element signature="e#534#535#0" expanded="true" />
             <element signature="e#575#576#0" expanded="true" />
             <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#219#220#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -428,6 +444,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="e#986#1007#0" expanded="true" />
+            <element signature="e#1048#1071#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -538,17 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ClassicMusic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-          <folding>
-            <element signature="e#87#88#0" expanded="true" />
-            <element signature="e#130#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RockMusic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -560,30 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MusicPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="e#89#90#0" expanded="true" />
-            <element signature="e#123#124#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#219#220#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TestSpring.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -591,17 +576,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MusicPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/musicPlayer.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ClassicMusic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          <folding>
+            <element signature="e#87#88#0" expanded="true" />
+            <element signature="e#130#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CountryMusic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding>
+            <element signature="e#87#88#0" expanded="true" />
+            <element signature="e#114#115#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/appContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="80" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
+        <state relative-caret-position="480">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#986#1007#0" expanded="true" />
+            <element signature="e#1048#1071#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
