@@ -23,7 +23,8 @@
 
 
     <bean id="musicPlayer"
-          class="MusicPlayer">
+          class="MusicPlayer"
+          scope="prototype">
         <property name="musicList">
             <list>
                 <ref bean="musicBeanClassic"/>
