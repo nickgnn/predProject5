@@ -1,3 +1,5 @@
+package com.myPackage.classes;
+
 public class CountryMusic implements Music {
     @Override
     public String getSong() {
