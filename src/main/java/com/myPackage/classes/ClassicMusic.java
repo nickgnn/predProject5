@@ -7,12 +7,12 @@ import javax.annotation.PreDestroy;
 
 //@Component
 public class ClassicMusic implements Music {
-    @PostConstruct
+//    @PostConstruct
     public void doMyInit() {
         System.out.println("Doing my initialization");
     }
 
-    @PreDestroy
+//    @PreDestroy
     public void doMyDestroy() {
         System.out.println("Doing my destruction");
     }
