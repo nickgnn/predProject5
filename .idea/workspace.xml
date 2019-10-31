@@ -72,14 +72,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassicMusic.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClassicMusic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/myPackage/classes/ClassicMusic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/javamentor/springmvc/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
@@ -154,6 +163,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/myPackage/classes/MusicPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myPackage/classes/TestSpring.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myPackage/classes/ClassicMusic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/javamentor/springmvc/model/User.java" />
       </list>
     </option>
   </component>
@@ -173,13 +183,15 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-14" />
-    <option name="width" value="2277" />
-    <option name="height" value="2114" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="707" />
+    <option name="y" value="756" />
+    <option name="width" value="966" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -214,26 +226,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="predProject5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="predProject5" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="myPackage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="predProject5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="predProject5" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="myPackage" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="springmvc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="predProject5" type="b2602c69:ProjectViewProjectNode" />
@@ -269,7 +262,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../predProject4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../predProject1" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -359,16 +352,15 @@
       <workItem from="1572277553119" duration="4936000" />
       <workItem from="1572363307919" duration="4681000" />
       <workItem from="1572447894309" duration="5701000" />
-      <workItem from="1572536185082" duration="4204000" />
+      <workItem from="1572536185082" duration="6327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39855000" />
+    <option name="totallyTimeSpent" value="41978000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2208" height="1208" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="2208" height="1208" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -410,13 +402,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1340">
-          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/appContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -801,11 +786,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myPackage/classes/ClassicMusic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/javamentor/springmvc/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
