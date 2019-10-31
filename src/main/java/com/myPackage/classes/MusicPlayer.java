@@ -2,10 +2,18 @@ package com.myPackage.classes;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
+    @Value("${musicPlayer.name}")
+    private String name;
+
+    @Value("${musicPlayer.volume}")
+    private int volume;
+
+
     private Music music1;
     private Music music2;
 
@@ -17,5 +25,13 @@ public class MusicPlayer {
 
     public String playMusic() {
         return "Playing: " + music1.getSong() + music2.getSong();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getVolume() {
+        return volume;
     }
 }
