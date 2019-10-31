@@ -2,7 +2,7 @@ package com.myPackage.classes;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Computer {
     private int id;
     private MusicPlayer musicPlayer;

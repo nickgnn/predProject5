@@ -5,15 +5,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
+//@Component
 public class ClassicMusic implements Music {
-    private ClassicMusic() {
-    }
-
-    public static ClassicMusic getClassicMusic() {
-        return new ClassicMusic();
-    }
-
     @PostConstruct
     public void doMyInit() {
         System.out.println("Doing my initialization");
