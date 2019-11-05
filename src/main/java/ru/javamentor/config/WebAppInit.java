@@ -1,25 +1,22 @@
 package ru.javamentor.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.servlet.DispatcherServlet;
-
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 @Configuration
-public class WebAppInit implements WebApplicationInitializer {
+public class WebAppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
-        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+    protected String[] getServletMappings() {
+        return new String[]{"/"};
+    }
 
-        context.register(SpringConfig.class, WebConfig.class);
-        context.setServletContext(servletContext);
+    @Override
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class<?>[]{WebConfig.class};
+    }
 
-        ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher", new DispatcherServlet(context));
-        dispatcher.setLoadOnStartup(1);
-        dispatcher.addMapping("/");
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return new Class<?>[]{WebConfig.class};
     }
 }
