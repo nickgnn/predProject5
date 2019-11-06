@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws DBException {
         System.out.println("START MAIN!!!!!!!!!!!!!!!!!!!!!!!");
 
-        Service service = UserService.getInstance();
+        Service service = new UserService();
 //        service.cleanUp();
 //        service.createTable();
 

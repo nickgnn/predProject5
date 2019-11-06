@@ -1,10 +1,12 @@
 package ru.javamentor.dao;
 
+import org.springframework.stereotype.Component;
 import ru.javamentor.model.User;
 
 import java.sql.SQLException;
 import java.util.List;
 
+@Component
 public interface UserDao {
     void createTable() throws SQLException;
 

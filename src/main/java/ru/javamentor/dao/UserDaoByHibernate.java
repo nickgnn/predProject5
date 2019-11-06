@@ -1,5 +1,6 @@
 package ru.javamentor.dao;
 
+import org.springframework.stereotype.Component;
 import ru.javamentor.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,13 +13,17 @@ import org.hibernate.service.ServiceRegistry;
 import java.sql.SQLException;
 import java.util.List;
 
+@Component
 public class UserDaoByHibernate implements UserDao {
     private Session session;
-    private Configuration configuration;
+    private Configuration configuration = getConfiguration();
 
-    public UserDaoByHibernate(Configuration configuration) {
-        this.configuration = configuration;
+    public UserDaoByHibernate() {
         this.session = createSessionFactory().openSession();
+    }
+
+    private Session createNewSession() {
+        return createSessionFactory().openSession();
     }
 
     private SessionFactory createSessionFactory() {
@@ -29,8 +34,26 @@ public class UserDaoByHibernate implements UserDao {
         return configuration.buildSessionFactory(serviceRegistry);
     }
 
+    public Configuration getConfiguration() {
+        Configuration configuration = new Configuration();
+
+        configuration.addAnnotatedClass(User.class);
+
+        configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL57Dialect");
+        configuration.setProperty("hibernate.connection.driver_class", "com.mysql.cj.jdbc.Driver");
+        configuration.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/db_example?serverTimezone=Europe/Moscow");
+        configuration.setProperty("hibernate.connection.username", "root");
+        configuration.setProperty("hibernate.connection.password", "1234");
+        configuration.setProperty("hibernate.show_sql", "true");
+        configuration.setProperty("hibernate.hbm2ddl.auto", "validate");
+
+        return configuration;
+    }
+
     @Override
     public void addUser(String name, int age) throws SQLException {
+        this.session = createNewSession();
+
         User user = getUserByName(name);
 
         if (user == null) {
@@ -45,6 +68,8 @@ public class UserDaoByHibernate implements UserDao {
 
     @Override
     public void addUser(String name, int age, String password, String role) throws SQLException {
+        this.session = createNewSession();
+
         User user = getUserByName(name);
 
         if (user == null) {
@@ -59,6 +84,8 @@ public class UserDaoByHibernate implements UserDao {
 
     @Override
     public List<User> getAllUsers() throws SQLException {
+        this.session = createNewSession();
+
         Transaction transaction = session.beginTransaction();
 
         List<User> users = session.createQuery("FROM User").list();
@@ -71,6 +98,8 @@ public class UserDaoByHibernate implements UserDao {
 
     @Override
     public User getUserByName(String name) throws SQLException {
+        this.session = createNewSession();
+
         Transaction transaction =  session.beginTransaction();
 
         String hql = "FROM User WHERE name = :userName";
@@ -91,6 +120,8 @@ public class UserDaoByHibernate implements UserDao {
 
     @Override
     public long getUserIdByName(String name) throws SQLException {
+        this.session = createNewSession();
+
         long id = 0;
         User user = getUserByName(name);
 
@@ -114,6 +145,8 @@ public class UserDaoByHibernate implements UserDao {
 
     @Override
     public int updateUser(User user, String name) throws SQLException {
+        this.session = createNewSession();
+
         User userCheck = getUserByName(name);
         int rows = 0;
 
@@ -139,6 +172,8 @@ public class UserDaoByHibernate implements UserDao {
 
     @Override
     public int updateUser(User user, int age) throws SQLException {
+        this.session = createNewSession();
+
         Transaction transaction = session.beginTransaction();
 
         String hql = "UPDATE User SET age = :newAge where id = :userID";
@@ -156,6 +191,8 @@ public class UserDaoByHibernate implements UserDao {
 
     @Override
     public int updateUser(User user, Long ID) throws SQLException {
+        this.session = createNewSession();
+
         Transaction transaction = session.beginTransaction();
 
         String hql = "UPDATE User SET id = :newID where id = :userID";
@@ -173,6 +210,8 @@ public class UserDaoByHibernate implements UserDao {
 
     @Override
     public int updateUser(User user, String name, int age, String password) throws SQLException {
+        this.session = createNewSession();
+
         Transaction transaction = session.beginTransaction();
 
         String hql = "UPDATE User SET password = :newPassword where id = :userID";
@@ -190,6 +229,8 @@ public class UserDaoByHibernate implements UserDao {
 
     @Override
     public int updateUser(User user, String name, int age, String password, String role) throws SQLException {
+        this.session = createNewSession();
+
         Transaction transaction = session.beginTransaction();
 
         String hql = "UPDATE User SET role = :newRole where id = :userID";
@@ -207,6 +248,8 @@ public class UserDaoByHibernate implements UserDao {
 
     @Override
     public void deleteUserByName(String name) throws SQLException {
+        this.session = createNewSession();
+
         Transaction transaction = session.beginTransaction();
 
         String hql = "DELETE User WHERE name = :userName";
@@ -221,6 +264,8 @@ public class UserDaoByHibernate implements UserDao {
 
     @Override
     public void deleteUserById(Long id) throws SQLException {
+        this.session = createNewSession();
+
         Transaction transaction = session.beginTransaction();
 
         String hql = "DELETE User WHERE id = :userID";

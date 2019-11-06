@@ -1,9 +1,10 @@
 package ru.javamentor.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import ru.javamentor.dao.UserDao;
 import ru.javamentor.exception.DBException;
 import org.springframework.stereotype.Component;
-import ru.javamentor.dao.AbstractUserDaoFactory;
-import ru.javamentor.dao.UserDaoFactory;
 import ru.javamentor.model.User;
 
 import java.sql.SQLException;
@@ -11,25 +12,14 @@ import java.util.List;
 
 @Component
 public class UserService implements Service {
-    private static UserService userService;
-    private AbstractUserDaoFactory factory;
-
-    public UserService(AbstractUserDaoFactory factory) {
-        this.factory = factory;
-    }
-
-    public static UserService getInstance() {
-        if (userService == null) {
-            userService = new UserService(new UserDaoFactory());
-        }
-
-        return userService;
-    }
+    @Autowired
+    @Qualifier("userDaoByHibernate")
+    UserDao userDao;
 
     @Override
     public void addUser(String name, int age) throws DBException {
         try {
-            factory.getTypeOfConnection().addUser(name, age);
+            userDao.addUser(name, age);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -38,7 +28,7 @@ public class UserService implements Service {
     @Override
     public void addUser(String name, int age, String password, String role) throws DBException {
         try {
-            factory.getTypeOfConnection().addUser(name, age, password, role);
+            userDao.addUser(name, age, password, role);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -47,7 +37,7 @@ public class UserService implements Service {
     @Override
     public List<User> getAllUsers() throws DBException {
         try {
-            return factory.getTypeOfConnection().getAllUsers();
+            return userDao.getAllUsers();
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -56,7 +46,7 @@ public class UserService implements Service {
     @Override
     public User getUserByName(String name) throws DBException {
         try {
-            return factory.getTypeOfConnection().getUserByName(name);
+            return userDao.getUserByName(name);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -65,7 +55,7 @@ public class UserService implements Service {
     @Override
     public long getUserIdByName(String name) throws DBException {
         try {
-            return factory.getTypeOfConnection().getUserIdByName(name);
+            return userDao.getUserIdByName(name);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -74,7 +64,7 @@ public class UserService implements Service {
     @Override
     public void updateUser(User user, String name) throws DBException {
         try {
-            factory.getTypeOfConnection().updateUser(user, name);
+            userDao.updateUser(user, name);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -83,7 +73,7 @@ public class UserService implements Service {
     @Override
     public void updateUser(User user, int age) throws DBException {
         try {
-            factory.getTypeOfConnection().updateUser(user, age);
+            userDao.updateUser(user, age);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -92,7 +82,7 @@ public class UserService implements Service {
     @Override
     public void updateUser(User user, String name, int age, String password) throws DBException {
         try {
-            factory.getTypeOfConnection().updateUser(user, name, age, password);
+            userDao.updateUser(user, name, age, password);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -101,7 +91,7 @@ public class UserService implements Service {
     @Override
     public void updateUser(User user, String name, int age, String password, String role) throws DBException {
         try {
-            factory.getTypeOfConnection().updateUser(user, name, age, password, role);
+            userDao.updateUser(user, name, age, password, role);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -110,7 +100,7 @@ public class UserService implements Service {
     @Override
     public void updateUser(User user, Long id) throws DBException {
         try {
-            factory.getTypeOfConnection().updateUser(user, id);
+            userDao.updateUser(user, id);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -119,7 +109,7 @@ public class UserService implements Service {
     @Override
     public boolean isExistsUser(String name) throws DBException {
         try {
-            return factory.getTypeOfConnection().isExistsUser(name);
+            return userDao.isExistsUser(name);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -128,7 +118,7 @@ public class UserService implements Service {
     @Override
     public void deleteUserByName(String name) throws DBException {
         try {
-            factory.getTypeOfConnection().deleteUserByName(name);
+            userDao.deleteUserByName(name);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -137,7 +127,7 @@ public class UserService implements Service {
     @Override
     public void deleteUserById(Long id) throws DBException {
         try {
-            factory.getTypeOfConnection().deleteUserById(id);
+            userDao.deleteUserById(id);
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -146,7 +136,7 @@ public class UserService implements Service {
     @Override
     public void createTable() throws DBException {
         try {
-            factory.getTypeOfConnection().createTable();
+            userDao.createTable();
         } catch (SQLException e) {
             throw new DBException(e);
         }
@@ -155,7 +145,7 @@ public class UserService implements Service {
     @Override
     public void cleanUp() throws DBException {
         try {
-            factory.getTypeOfConnection().dropTable();
+            userDao.dropTable();
         } catch (SQLException e) {
             throw new DBException(e);
         }
