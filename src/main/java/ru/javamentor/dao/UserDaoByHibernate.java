@@ -1,53 +1,24 @@
 package ru.javamentor.dao;
 
-import org.springframework.stereotype.Component;
-import ru.javamentor.model.User;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
-import org.hibernate.service.ServiceRegistry;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import ru.javamentor.config.HibernateConfig;
+import ru.javamentor.model.User;
 
 import java.sql.SQLException;
 import java.util.List;
 
 @Component
 public class UserDaoByHibernate implements UserDao {
+    @Autowired
+    private HibernateConfig hibernateConfig;
     private Session session;
-    private Configuration configuration = getConfiguration();
-
-    public UserDaoByHibernate() {
-        this.session = createSessionFactory().openSession();
-    }
 
     private Session createNewSession() {
-        return createSessionFactory().openSession();
-    }
-
-    private SessionFactory createSessionFactory() {
-        StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder();
-        builder.applySettings(configuration.getProperties());
-        ServiceRegistry serviceRegistry = builder.build();
-
-        return configuration.buildSessionFactory(serviceRegistry);
-    }
-
-    public Configuration getConfiguration() {
-        Configuration configuration = new Configuration();
-
-        configuration.addAnnotatedClass(User.class);
-
-        configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL57Dialect");
-        configuration.setProperty("hibernate.connection.driver_class", "com.mysql.cj.jdbc.Driver");
-        configuration.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/db_example?serverTimezone=Europe/Moscow");
-        configuration.setProperty("hibernate.connection.username", "root");
-        configuration.setProperty("hibernate.connection.password", "1234");
-        configuration.setProperty("hibernate.show_sql", "true");
-        configuration.setProperty("hibernate.hbm2ddl.auto", "validate");
-
-        return configuration;
+        return hibernateConfig.createSessionFactory().openSession();
     }
 
     @Override
