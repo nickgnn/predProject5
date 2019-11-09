@@ -62,45 +62,9 @@ public class UserService implements Service {
     }
 
     @Override
-    public void updateUser(User user, String name) throws DBException {
-        try {
-            userDao.updateUser(user, name);
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
-
-    @Override
-    public void updateUser(User user, int age) throws DBException {
-        try {
-            userDao.updateUser(user, age);
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
-
-    @Override
-    public void updateUser(User user, String name, int age, String password) throws DBException {
-        try {
-            userDao.updateUser(user, name, age, password);
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
-
-    @Override
     public void updateUser(User user, String name, int age, String password, String role) throws DBException {
         try {
             userDao.updateUser(user, name, age, password, role);
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
-
-    @Override
-    public void updateUser(User user, Long id) throws DBException {
-        try {
-            userDao.updateUser(user, id);
         } catch (SQLException e) {
             throw new DBException(e);
         }

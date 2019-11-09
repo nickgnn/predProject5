@@ -119,106 +119,20 @@ public class UserDaoByHibernate implements UserDao {
     }
 
     @Override
-    public int updateUser(User user, String name) throws SQLException {
-        this.session = createNewSession();
-
-        User userCheck = getUserByName(name);
-        int rows = 0;
-
-        if (userCheck == null) {
-            Transaction transaction = session.beginTransaction();
-
-            String hql = "UPDATE User SET name = :newName where id = :userID";
-            Query query = session.createQuery(hql);
-            query.setParameter("newName", name);
-            query.setParameter("userID", user.getId());
-
-            rows = query.executeUpdate();
-
-            transaction.commit();
-            session.close();
-        } else {
-            System.out.println("This name already exists, choose another name:)");
-            return rows;
-        }
-
-        return rows;
-    }
-
-    @Override
-    public int updateUser(User user, int age) throws SQLException {
+    public void updateUser(User user, String name, int age, String password, String role) throws SQLException {
         this.session = createNewSession();
 
         Transaction transaction = session.beginTransaction();
 
-        String hql = "UPDATE User SET age = :newAge where id = :userID";
-        Query query = session.createQuery(hql);
-        query.setParameter("newAge", age);
-        query.setParameter("userID", user.getId());
+        user.setName(name);
+        user.setAge(age);
+        user.setPassword(password);
+        user.setRole(role);
 
-        int res = query.executeUpdate();
-
-        transaction.commit();
-        session.close();
-
-        return res;
-    }
-
-    @Override
-    public int updateUser(User user, Long ID) throws SQLException {
-        this.session = createNewSession();
-
-        Transaction transaction = session.beginTransaction();
-
-        String hql = "UPDATE User SET id = :newID where id = :userID";
-        Query query = session.createQuery(hql);
-        query.setParameter("newID", ID);
-        query.setParameter("userID", user.getId());
-
-        int res = query.executeUpdate();
+        session.update(user);
 
         transaction.commit();
         session.close();
-
-        return res;
-    }
-
-    @Override
-    public int updateUser(User user, String name, int age, String password) throws SQLException {
-        this.session = createNewSession();
-
-        Transaction transaction = session.beginTransaction();
-
-        String hql = "UPDATE User SET password = :newPassword where id = :userID";
-        Query query = session.createQuery(hql);
-        query.setParameter("newPassword", password);
-        query.setParameter("userID", user.getId());
-
-        int res = query.executeUpdate();
-
-        transaction.commit();
-        session.close();
-
-        return res;
-    }
-
-    @Override
-    public int updateUser(User user, String name, int age, String password, String role) throws SQLException {
-        this.session = createNewSession();
-
-        Transaction transaction = session.beginTransaction();
-
-        String hql = "UPDATE User SET role = :newRole where id = :userID";
-        Query query = session.createQuery(hql);
-        query.setParameter("newRole", role);
-        query.setParameter("userID", user.getId());
-
-        int res = query.executeUpdate();
-
-        transaction.commit();
-        session.close();
-
-        return res;
     }
 
     @Override

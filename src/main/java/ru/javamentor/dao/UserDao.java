@@ -20,15 +20,7 @@ public interface UserDao {
 
     User getUserByName(String name) throws SQLException;
 
-    int updateUser(User user, String name) throws SQLException;
-
-    int updateUser(User user, int age) throws SQLException;
-
-    int updateUser(User user, Long ID) throws SQLException;
-
-    int updateUser(User user, String name, int age, String password) throws SQLException;
-
-    int updateUser(User user, String name, int age, String password, String role) throws SQLException;
+    void updateUser(User user, String name, int age, String password, String role) throws SQLException;
 
     long getUserIdByName(String name) throws SQLException;
 

@@ -50,15 +50,15 @@ public class UserController {
         String newRole = request.getParameter("newRole");
 
         if (!newName.equals("")) {
-            service.updateUser(user, newName);
+            service.updateUser(user, newName, user.getAge(), user.getPassword(), user.getRole());
         }
 
         if (!newAge.equals("")) {
-            service.updateUser(user, Integer.valueOf(newAge));
+            service.updateUser(user, user.getName(), Integer.valueOf(newAge), user.getPassword(), user.getRole());
         }
 
         if (!newPassword.equals("")) {
-            service.updateUser(user, user.getName(), user.getAge(), newPassword);
+            service.updateUser(user, user.getName(), user.getAge(), newPassword, user.getRole());
         }
 
         if (!newRole.equals("")) {
