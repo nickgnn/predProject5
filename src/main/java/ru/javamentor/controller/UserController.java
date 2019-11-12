@@ -49,21 +49,13 @@ public class UserController {
         String newPassword = request.getParameter("newPassword");
         String newRole = request.getParameter("newRole");
 
-        if (!newName.equals("")) {
-            service.updateUser(user, newName, user.getAge(), user.getPassword(), user.getRole());
+        if (newAge.equals("")) {
+            newAge = String.valueOf(user.getAge());
         }
 
-        if (!newAge.equals("")) {
-            service.updateUser(user, user.getName(), Integer.valueOf(newAge), user.getPassword(), user.getRole());
-        }
+        User newUser = new User(newName, Integer.valueOf(newAge), newPassword, newRole);
 
-        if (!newPassword.equals("")) {
-            service.updateUser(user, user.getName(), user.getAge(), newPassword, user.getRole());
-        }
-
-        if (!newRole.equals("")) {
-            service.updateUser(user, user.getName(), user.getAge(), user.getPassword(), newRole);
-        }
+        service.updateUser(user, newUser);
 
         return "redirect:/users";
     }

@@ -20,7 +20,7 @@ public interface Service {
 
     User getUserByName(String name) throws DBException;
 
-    void updateUser(User user, String name, int age, String password, String role) throws DBException;
+    void updateUser(User user, User newUser) throws DBException;
 
     boolean isExistsUser(String name) throws DBException;
 
