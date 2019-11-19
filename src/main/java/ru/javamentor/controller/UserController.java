@@ -43,7 +43,7 @@ public class UserController {
     }
 
     @GetMapping("/edit")
-    public String editUser(@ModelAttribute User user, HttpServletRequest request) throws DBException{
+    public String editUser(@ModelAttribute User user, HttpServletRequest request) throws DBException {
         String newName = request.getParameter("newName");
         String newAge = request.getParameter("newAge");
         String newPassword = request.getParameter("newPassword");

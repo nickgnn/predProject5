@@ -76,6 +76,8 @@ public class UserService implements Service {
                 user.setRole(newUser.getRole());
             }
 
+            user.setAge(newUser.getAge());
+
             userDao.updateUser(user);
         } catch (SQLException e) {
             throw new DBException(e);
